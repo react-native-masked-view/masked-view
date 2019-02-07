@@ -1,0 +1,25 @@
+{
+  "name": "react-native-masked-view",
+  "description": "React Native MaskedView component for iOS",
+  "main": "index.js",
+  "author": "Mike Nedosekin <crespo8800@gmail.com>",
+  "license": "MIT",
+  "version": "0.0.1",
+  "homepage": "https://github.com/react-native-community/react-native-masked-view",
+  "scripts": {
+  },
+  "peerDependencies": {
+    "react": "^16.0",
+    "react-native": "^0.57"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "react-native": ">=0.57 <0.59"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-native-community/react-native-masked-view.git"
+  }
+}
