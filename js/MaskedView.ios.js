@@ -4,27 +4,25 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @format
- * @flow
  */
 
 import React from 'react';
-import { View, requireNativeComponent } from 'react-native';
+import { View, StyleSheet, requireNativeComponent } from 'react-native';
 
-
-const RCTMaskedView = requireNativeComponent('RCTMaskedView');
+const RNCMaskedView = requireNativeComponent('RNCMaskedView');
 
 /**
  * Renders the child view with a mask specified in the `maskElement` prop.
  *
  * ```
  * import React from 'react';
- * import { MaskedViewIOS, Text, View } from 'react-native';
+ * import { Text, View } from 'react-native';
+ * import MaskedView from 'react-native-masked-view';
  *
  * class MyMaskedView extends React.Component {
  *   render() {
  *     return (
- *       <MaskedViewIOS
+ *       <MaskedView
  *         style={{ flex: 1 }}
  *         maskElement={
  *           <View style={styles.maskContainerStyle}>
@@ -35,7 +33,7 @@ const RCTMaskedView = requireNativeComponent('RCTMaskedView');
  *         }
  *       >
  *         <View style={{ flex: 1, backgroundColor: 'blue' }} />
- *       </MaskedViewIOS>
+ *       </MaskedView>
  *     );
  *   }
  * }
@@ -68,12 +66,12 @@ class MaskedViewIOS extends React.Component {
     }
 
     return (
-      <RCTMaskedView {...otherViewProps}>
+      <RNCMaskedView {...otherViewProps}>
         <View pointerEvents="none" style={StyleSheet.absoluteFill}>
           {maskElement}
         </View>
         {children}
-      </RCTMaskedView>
+      </RNCMaskedView>
     );
   }
 }
