@@ -4,7 +4,7 @@ React Native MaskedView for iOS.
 ## Platforms Supported
 
 - [x] iOS
-- [] Android
+- [ ] Android
 
 _Note: React Native MaskedView is not currently supported by Expo unless you "eject"._
 
