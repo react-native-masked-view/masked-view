@@ -4,6 +4,8 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
+ * @flow
+ * @format
  */
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
@@ -12,7 +14,7 @@ import { View, StyleSheet } from 'react-native';
  * Common implementation for a simple stubbed view. Simply applies the view's styles to the inner
  * View component and renders its children.
  */
-class UnimplementedView extends React.Component {
+class UnimplementedView extends React.Component<$FlowFixMeProps> {
   setNativeProps() {
     // Do nothing.
     // This method is required in order to use this view as a Touchable* child.

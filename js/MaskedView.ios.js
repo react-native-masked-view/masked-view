@@ -4,12 +4,25 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
+ * @flow
+ * @format
  */
 
 import React from 'react';
-import { View, StyleSheet, requireNativeComponent } from 'react-native';
+import { View, ViewPropTypes, StyleSheet, requireNativeComponent } from 'react-native';
 
 const RNCMaskedView = requireNativeComponent('RNCMaskedView');
+
+type Props = $ReadOnly<{|
+  ...ViewPropTypes,
+
+  children: React.Node,
+  /**
+   * Should be a React element to be rendered and applied as the
+   * mask for the child element.
+   */
+  maskElement: React.Element<any>,
+|}>;
 
 /**
  * Renders the child view with a mask specified in the `maskElement` prop.
@@ -48,7 +61,7 @@ const RNCMaskedView = requireNativeComponent('RNCMaskedView');
  * transparent pixels block that content.
  *
  */
-class MaskedViewIOS extends React.Component {
+class MaskedViewIOS extends React.Component<Props> {
   _hasWarnedInvalidRenderMask = false;
 
   render() {
