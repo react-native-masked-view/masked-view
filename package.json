@@ -5,7 +5,13 @@
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
   "version": "0.0.1",
-  "homepage": "https://github.com/react-native-community/react-native-masked-view",
+  "homepage": "https://github.com/react-native-community/react-native-masked-view#readme",
+  "keywords": [
+    "react-native",
+    "react native",
+    "masked-view",
+    "masked view"
+  ],
   "scripts": {
   },
   "peerDependencies": {
