@@ -11,18 +11,18 @@ _Note: React Native MaskedView is not currently supported by Expo unless you "ej
 ## Getting Started
 
 ```
-$ yarn add react-native-masked-view
-$ react-native link react-native-masked-view
+$ yarn add @react-native-community/masked-view
+$ react-native link @react-native-community/masked-view
 ```
 
 ## Usage
 
-Import the `MaskedView` component from `react-native-masked-view` and use it like so:
+Import the `MaskedView` component from `@react-native-community/masked-view` and use it like so:
 
 ```jsx
 import React from 'react';
 import { Text, View } from 'react-native';
-import MaskedView from 'react-native-masked-view';
+import MaskedView from '@react-native-community/masked-view';
 
 export default class App extends React.Component {
   render() {
@@ -58,3 +58,23 @@ export default class App extends React.Component {
   }
 }
 ```
+
+The following image demonstrates that you can put almost anything behind the mask. The three examples shown are masked `<View>`, `<Text>`, and `<Image>`.
+
+<p align="center"><img src="img/example.png" width="200"></img></p>
+
+### Props
+
+* [View props...](https://github.com/facebook/react-native-website/blob/master/docs/view.md#props)
+
+- [`maskElement`](#maskelement)
+
+# Reference
+
+## Props
+
+### `maskElement`
+
+| Type    | Required |
+| ------- | -------- |
+| element | Yes      |
