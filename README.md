@@ -61,13 +61,13 @@ export default class App extends React.Component {
 
 The following image demonstrates that you can put almost anything behind the mask. The three examples shown are masked `<View>`, `<Text>`, and `<Image>`.
 
-<center><img src="img/example.png" width="200"></img></center>
+<p align="center"><img src="img/example.png" width="200"></img></p>
 
 ### Props
 
 * [View props...](https://github.com/facebook/react-native-website/blob/master/docs/view.md#props)
 
-- [`maskElement`](README.md#maskelement)
+- [`maskElement`](#maskelement)
 
 # Reference
 
