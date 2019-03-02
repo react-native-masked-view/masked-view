@@ -31,6 +31,10 @@ aliases:
   name: Flow Checks
   command: yarn test:flow
 
+- &javascript
+  name: Javascript Tests
+  command: yarn test:js
+
 # -------------------------
 #        DEFAULTS
 # -------------------------

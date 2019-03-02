@@ -13,7 +13,8 @@
     "masked view"
   ],
   "scripts": {
-    "test:flow": "flow check"
+    "test:flow": "flow check",
+    "test:js": "echo 0"
   },
   "peerDependencies": {
     "react": "^16.0",
