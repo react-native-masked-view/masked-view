@@ -9,20 +9,11 @@
  */
 
 import React from 'react';
-import { View, ViewPropTypes, StyleSheet, requireNativeComponent } from 'react-native';
+import { View, StyleSheet, requireNativeComponent } from 'react-native';
 
 const RNCMaskedView = requireNativeComponent('RNCMaskedView');
 
-type Props = $ReadOnly<{|
-  ...ViewPropTypes,
-
-  children: React.Node,
-  /**
-   * Should be a React element to be rendered and applied as the
-   * mask for the child element.
-   */
-  maskElement: React.Element<any>,
-|}>;
+import { MaskedViewProps } from './MaskedViewTypes';
 
 /**
  * Renders the child view with a mask specified in the `maskElement` prop.
@@ -61,7 +52,7 @@ type Props = $ReadOnly<{|
  * transparent pixels block that content.
  *
  */
-class MaskedViewIOS extends React.Component<Props> {
+class MaskedViewIOS extends React.Component<MaskedViewProps> {
   _hasWarnedInvalidRenderMask = false;
 
   render() {

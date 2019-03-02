@@ -13,19 +13,24 @@
     "masked view"
   ],
   "scripts": {
+    "test:flow": "flow check",
+    "test:js": "echo 0"
   },
   "peerDependencies": {
     "react": "^16.0",
     "react-native": "^0.57"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.2.2",
-    "react-native": ">=0.57 <0.59"
+    "react-native": ">=0.57 <0.59",
+    "flow-bin": "^0.86.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-community/react-native-masked-view.git"
+    "url": "git+https://github.com/react-native-community/react-native-masked-view.git"
+  },
+  "bugs": {
+    "url": "https://github.com/react-native-community/react-native-masked-view/issues"
   }
 }

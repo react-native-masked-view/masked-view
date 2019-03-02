@@ -1,4 +1,9 @@
 # React Native MaskedView
+
+[![Build Status][build-badge]][build]
+[![Version][version-badge]][package]
+[![MIT License][license-badge]][license]
+
 React Native MaskedView for iOS.
 
 ## Platforms Supported
@@ -78,3 +83,11 @@ The following image demonstrates that you can put almost anything behind the mas
 | Type    | Required |
 | ------- | -------- |
 | element | Yes      |
+
+<!-- badges -->
+[build-badge]: https://img.shields.io/circleci/project/github/react-native-community/react-native-masked-view/master.svg?style=flat-square
+[build]: https://circleci.com/gh/react-native-community/react-native-masked-view
+[version-badge]: https://img.shields.io/npm/v/@react-native-community/masked-view.svg?style=flat-square
+[package]: https://www.npmjs.com/package/@react-native-community/masked-view
+[license-badge]: https://img.shields.io/npm/l/@react-native-community/masked-view.svg?style=flat-square
+[license]: https://opensource.org/licenses/MIT
