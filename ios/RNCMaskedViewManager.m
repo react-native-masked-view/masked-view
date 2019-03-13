@@ -8,7 +8,6 @@
 #import "RNCMaskedViewManager.h"
 
 #import "RNCMaskedView.h"
-#import "RCTUIManager.h"
 
 @implementation RNCMaskedViewManager
 
