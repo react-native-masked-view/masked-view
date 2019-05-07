@@ -1,4 +1,4 @@
-// CREDITS: This types are based on the original work made by all the people who contributed to @types/react-native
+// CREDITS: These types are based on the original work made by all the people who contributed to @types/react-native
 
 import * as React from 'react'
 import * as ReactNative from "react-native";
