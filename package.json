@@ -1,6 +1,7 @@
 {
   "name": "@react-native-community/masked-view",
   "description": "React Native MaskedView component for iOS",
+  "types": "./types/index.d.ts",
   "main": "index.js",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
