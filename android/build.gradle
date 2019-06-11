@@ -1,0 +1,61 @@
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+buildscript {
+  repositories {
+    google()
+    maven {
+      url 'https://maven.google.com'
+    }
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.3.1'
+  }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion safeExtGet('compileSdkVersion', 28)
+  buildToolsVersion safeExtGet('buildToolsVersion', '28.0.3')
+
+  defaultConfig {
+    minSdkVersion safeExtGet('minSdkVersion', 16)
+    targetSdkVersion safeExtGet('targetSdkVersion', 28)
+  }
+
+  sourceSets {
+    main {
+      java.srcDirs = ['src/main/java']
+    }
+  }
+
+  lintOptions {
+    abortOnError false
+    warning 'InvalidPackage'
+  }
+    buildTypes {
+        release {
+        }
+    }
+}
+
+repositories {
+  google()
+  jcenter()
+  maven {
+   url 'https://maven.google.com'
+  }
+  maven { url "https://jitpack.io" }
+  maven {
+    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+    url "$rootDir/../node_modules/react-native/android"
+  }
+}
+
+dependencies {
+  implementation 'com.facebook.react:react-native:+'
+}
