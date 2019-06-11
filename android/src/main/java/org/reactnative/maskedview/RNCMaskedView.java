@@ -7,9 +7,10 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.view.View;
-import android.widget.FrameLayout;
 
-public class RNCMaskedView extends FrameLayout {
+import com.facebook.react.views.view.ReactViewGroup;
+
+public class RNCMaskedView extends ReactViewGroup {
   private static final String TAG = "RNCMaskedView";
 
   private Bitmap mBitmapMask = null;
@@ -22,7 +23,6 @@ public class RNCMaskedView extends FrameLayout {
 
     mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     mPorterDuffXferMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
-    //mPaint.setXfermode(mPorterDuffXferMode);
   }
 
   @Override
