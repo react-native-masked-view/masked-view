@@ -13,7 +13,7 @@ import { View, StyleSheet, requireNativeComponent } from 'react-native';
 
 const RNCMaskedView = requireNativeComponent('RNCMaskedView');
 
-import { MaskedViewProps } from './MaskedViewTypes';
+import { type MaskedViewProps } from './MaskedViewTypes';
 
 /**
  * Renders the child view with a mask specified in the `maskElement` prop.
@@ -56,20 +56,23 @@ class MaskedViewIOS extends React.Component<MaskedViewProps> {
   _hasWarnedInvalidRenderMask = false;
 
   render() {
-    const {maskElement, children, ...otherViewProps} = this.props;
+    const { maskElement, children, ...otherViewProps } = this.props;
 
     if (!React.isValidElement(maskElement)) {
       if (!this._hasWarnedInvalidRenderMask) {
+        // eslint-disable-next-line no-console
         console.warn(
           'MaskedView: Invalid `maskElement` prop was passed to MaskedView. ' +
-            'Expected a React Element. No mask will render.',
+            'Expected a React Element. No mask will render.'
         );
         this._hasWarnedInvalidRenderMask = true;
       }
+      // $FlowFixMe
       return <View {...otherViewProps}>{children}</View>;
     }
 
     return (
+      // eslint-disable-next-line react/jsx-props-no-spreading
       <RNCMaskedView {...otherViewProps}>
         <View pointerEvents="none" style={StyleSheet.absoluteFill}>
           {maskElement}

@@ -15,7 +15,9 @@
   ],
   "scripts": {
     "test:flow": "flow check",
-    "test:js": "echo 0"
+    "test:js": "echo 0",
+    "test:lint": "eslint ./",
+    "test:prettier": "prettier --check './**/*.js'"
   },
   "peerDependencies": {
     "react": "^16.0",
@@ -24,8 +26,16 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.2.2",
-    "react-native": ">=0.57 <0.59",
-    "flow-bin": "^0.86.0"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-flowtype": "^3.10.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-native": "^3.7.0",
+    "flow-bin": "^0.86.0",
+    "prettier": "^1.18.2",
+    "react-native": ">=0.57 <0.59"
   },
   "repository": {
     "type": "git",
