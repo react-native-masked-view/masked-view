@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/react-native-community/react-native-masked-view#readme",
   "keywords": [
     "react-native",
@@ -35,7 +35,7 @@
     "eslint-plugin-react-native": "^3.7.0",
     "flow-bin": "^0.86.0",
     "prettier": "^1.18.2",
-    "react-native": ">=0.57 <0.59"
+    "react-native": ">=0.57"
   },
   "repository": {
     "type": "git",
