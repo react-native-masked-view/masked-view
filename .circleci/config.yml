@@ -91,6 +91,20 @@ jobs:
           at: ~/react-native-masked-view
       - run: *javascript
 
+  eslint:
+    <<: *js_defaults
+    steps:
+      - attach_workspace:
+          at: ~/react-native-masked-view
+      - run: *eslint
+
+  prettier:
+    <<: *js_defaults
+    steps:
+      - attach_workspace:
+          at: ~/react-native-masked-view
+      - run: *prettier
+
 # -------------------------
 #        WORK FLOWS
 # -------------------------
@@ -100,6 +114,12 @@ workflows:
     jobs:
       - checkout-code
       - flow:
+          requires:
+            - checkout-code
+      - eslint:
+          requires:
+            - checkout-code
+      - prettier:
           requires:
             - checkout-code
       - javascript:
