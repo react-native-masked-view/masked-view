@@ -1,6 +1,5 @@
 package org.reactnative.maskedview;
 
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Toast;
 
