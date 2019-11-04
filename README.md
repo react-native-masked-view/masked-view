@@ -17,6 +17,27 @@ _Note: React Native MaskedView is not currently supported by Expo unless you "ej
 
 ```
 $ yarn add @react-native-community/masked-view
+```
+
+or
+
+```
+$ npm install --save @react-native-community/masked-view
+```
+
+#### Using React Native >= 0.60
+
+Linking the package manually is not required anymore with [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md).
+
+- **iOS Platform:**
+
+  `$ cd ios && pod install`
+
+#### Using React Native < 0.60
+
+You then need to link the native parts of the library for the platforms you are using. The easiest way to link the library is using the CLI tool by running this command from the root of your project:
+
+```
 $ react-native link @react-native-community/masked-view
 ```
 
@@ -33,7 +54,7 @@ export default class App extends React.Component {
   render() {
     return (
       <MaskedView
-        style={{flex: 1, flexDirection: 'row', height: '100%'}}
+        style={{ flex: 1, flexDirection: 'row', height: '100%' }}
         maskElement={
           <View
             style={{
@@ -41,23 +62,26 @@ export default class App extends React.Component {
               backgroundColor: 'transparent',
               flex: 1,
               justifyContent: 'center',
-              alignItems: 'center',
-            }}>
+              alignItems: 'center'
+            }}
+          >
             <Text
               style={{
                 fontSize: 60,
                 color: 'black',
-                fontWeight: 'bold',
-              }}>
+                fontWeight: 'bold'
+              }}
+            >
               Basic Mask
             </Text>
           </View>
-        }>
+        }
+      >
         {/* Shows behind the mask, you can put anything here, such as an image */}
-        <View style={{flex: 1, height: '100%', backgroundColor: '#324376'}} />
-        <View style={{flex: 1, height: '100%', backgroundColor: '#F5DD90'}} />
-        <View style={{flex: 1, height: '100%', backgroundColor: '#F76C5E'}} />
-        <View style={{flex: 1, height: '100%', backgroundColor: '#e1e1e1'}} />
+        <View style={{ flex: 1, height: '100%', backgroundColor: '#324376' }} />
+        <View style={{ flex: 1, height: '100%', backgroundColor: '#F5DD90' }} />
+        <View style={{ flex: 1, height: '100%', backgroundColor: '#F76C5E' }} />
+        <View style={{ flex: 1, height: '100%', backgroundColor: '#e1e1e1' }} />
       </MaskedView>
     );
   }
@@ -70,9 +94,9 @@ The following image demonstrates that you can put almost anything behind the mas
 
 ### Props
 
-* [View props...](https://github.com/facebook/react-native-website/blob/master/docs/view.md#props)
+- [View props...](https://github.com/facebook/react-native-website/blob/master/docs/view.md#props)
 
-- [`maskElement`](#maskelement)
+* [`maskElement`](#maskelement)
 
 # Reference
 
@@ -85,6 +109,7 @@ The following image demonstrates that you can put almost anything behind the mas
 | element | Yes      |
 
 <!-- badges -->
+
 [build-badge]: https://img.shields.io/circleci/project/github/react-native-community/react-native-masked-view/master.svg?style=flat-square
 [build]: https://circleci.com/gh/react-native-community/react-native-masked-view
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/masked-view.svg?style=flat-square
