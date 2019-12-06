@@ -49,6 +49,13 @@ public class RNCMaskedView extends ReactViewGroup {
   public static Bitmap getBitmapFromView(final View view) {
     view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
 
+    // If the maskedElement's underlying View has a zero width or height,
+    // it cannot be rendered into a Bitmap. In this case, we will disable
+    // masking.
+    if (view.getMeasuredWidth() == 0 || view.getMeasuredHeight() == 0) {
+      return null;
+    }
+
     final Bitmap bitmap = Bitmap.createBitmap(view.getMeasuredWidth(),
             view.getMeasuredHeight(), Bitmap.Config.ARGB_8888);
 
