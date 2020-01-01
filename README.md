@@ -3,6 +3,7 @@
 [![Build Status][build-badge]][build]
 [![Version][version-badge]][package]
 [![MIT License][license-badge]][license]
+[![Lean Core Badge][lean-core-badge]][lean-core-issue]
 
 React Native MaskedView for iOS and Android.
 
@@ -116,3 +117,5 @@ The following image demonstrates that you can put almost anything behind the mas
 [package]: https://www.npmjs.com/package/@react-native-community/masked-view
 [license-badge]: https://img.shields.io/npm/l/@react-native-community/masked-view.svg?style=flat-square
 [license]: https://opensource.org/licenses/MIT
+[lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
+[lean-core-issue]: https://github.com/facebook/react-native/issues/23313
