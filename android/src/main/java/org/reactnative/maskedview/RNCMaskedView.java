@@ -42,7 +42,10 @@ public class RNCMaskedView extends ReactViewGroup {
     super.onLayout(changed, l, t, r, b);
 
     if (changed) {
-      this.mBitmapMask = getBitmapFromView(getChildAt(0));
+      View maskView = getChildAt(0);
+      maskView.setVisibility(View.VISIBLE);
+      this.mBitmapMask = getBitmapFromView(maskView);
+      maskView.setVisibility(View.INVISIBLE);
     }
   }
 
