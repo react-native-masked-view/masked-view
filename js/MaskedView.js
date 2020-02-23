@@ -60,10 +60,9 @@ class MaskedViewIOS extends React.Component<MaskedViewProps> {
 
     if (!React.isValidElement(maskElement)) {
       if (!this._hasWarnedInvalidRenderMask) {
-        // eslint-disable-next-line no-console
         console.warn(
           'MaskedView: Invalid `maskElement` prop was passed to MaskedView. ' +
-            'Expected a React Element. No mask will render.'
+            'Expected a React Element. No mask will render.',
         );
         this._hasWarnedInvalidRenderMask = true;
       }
@@ -72,7 +71,6 @@ class MaskedViewIOS extends React.Component<MaskedViewProps> {
     }
 
     return (
-      // eslint-disable-next-line react/jsx-props-no-spreading
       <RNCMaskedView {...otherViewProps}>
         <View pointerEvents="none" style={StyleSheet.absoluteFill}>
           {maskElement}
