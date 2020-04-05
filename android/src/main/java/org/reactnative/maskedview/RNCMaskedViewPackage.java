@@ -22,4 +22,9 @@ public class RNCMaskedViewPackage implements ReactPackage {
             new RNCMaskedViewManager()
       );
   }
+  
+  @Override
+  public List<Class<? extends JavaScriptModule>> createJSModules() {
+    return Collections.emptyList();
+  }
 }
