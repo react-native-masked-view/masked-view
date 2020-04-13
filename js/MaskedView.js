@@ -11,7 +11,7 @@
 import React from 'react';
 import { View, StyleSheet, requireNativeComponent } from 'react-native';
 
-const RNCMaskedView = requireNativeComponent('RNCMaskedView');
+const RNCMaskedView = requireNativeComponent<any>('RNCMaskedView');
 
 import { type MaskedViewProps } from './MaskedViewTypes';
 
@@ -52,7 +52,7 @@ import { type MaskedViewProps } from './MaskedViewTypes';
  * transparent pixels block that content.
  *
  */
-class MaskedViewIOS extends React.Component<MaskedViewProps> {
+class MaskedView extends React.Component<MaskedViewProps> {
   _hasWarnedInvalidRenderMask = false;
 
   render() {
@@ -81,4 +81,4 @@ class MaskedViewIOS extends React.Component<MaskedViewProps> {
   }
 }
 
-module.exports = MaskedViewIOS;
+module.exports = MaskedView;
