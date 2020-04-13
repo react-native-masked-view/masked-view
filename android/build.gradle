@@ -3,16 +3,15 @@ def safeExtGet(prop, fallback) {
 }
 
 buildscript {
-  repositories {
-    google()
-    maven {
-      url 'https://maven.google.com'
+  if (project == rootProject) {
+    repositories {
+      google()
+      jcenter()
     }
-    jcenter()
-  }
 
-  dependencies {
-    classpath 'com.android.tools.build:gradle:3.3.1'
+    dependencies {
+      classpath 'com.android.tools.build:gradle:3.3.1'
+    }
   }
 }
 
@@ -46,9 +45,6 @@ android {
 repositories {
   google()
   jcenter()
-  maven {
-   url 'https://maven.google.com'
-  }
   maven { url "https://jitpack.io" }
   maven {
     // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
