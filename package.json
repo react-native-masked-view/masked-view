@@ -23,6 +23,14 @@
     "react": "^16.0",
     "react-native": ">=0.57"
   },
+  "files": [
+    "index.js",
+    "android",
+    "ios",
+    "js",
+    "types",
+    "RNCMaskedView.podspec"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.6.4",
