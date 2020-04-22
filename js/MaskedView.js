@@ -52,7 +52,7 @@ import { type MaskedViewProps } from './MaskedViewTypes';
  * transparent pixels block that content.
  *
  */
-class MaskedView extends React.Component<MaskedViewProps> {
+export default class MaskedView extends React.Component<MaskedViewProps> {
   _hasWarnedInvalidRenderMask = false;
 
   render() {
@@ -80,5 +80,3 @@ class MaskedView extends React.Component<MaskedViewProps> {
     );
   }
 }
-
-module.exports = MaskedView;
