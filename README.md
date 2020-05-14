@@ -32,7 +32,7 @@ Linking the package manually is not required anymore with [Autolinking](https://
 
 - **iOS Platform:**
 
-  `$ cd ios && pod install`
+  `$ npx pod-install`
 
 #### Using React Native < 0.60
 
