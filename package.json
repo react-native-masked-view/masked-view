@@ -1,8 +1,10 @@
 {
   "name": "@react-native-community/masked-view",
   "description": "React Native MaskedView component",
-  "types": "./types/index.d.ts",
-  "main": "index.js",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "react-native": "js/index.js",
+  "types": "types/index.d.ts",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
   "version": "0.1.10",
@@ -17,23 +19,27 @@
     "test:flow": "flow check",
     "test:js": "echo 0",
     "test:lint": "eslint ./",
-    "test:prettier": "prettier --check './**/*.js'"
+    "test:prettier": "prettier --check './**/*.js'",
+    "prepare": "bob build"
   },
   "peerDependencies": {
     "react": "^16.0",
     "react-native": ">=0.57"
   },
   "files": [
+    "js",
+    "lib",
+    "!**/__tests__",
     "index.js",
     "android",
     "ios",
-    "js",
     "types",
     "RNCMaskedView.podspec"
   ],
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.6.4",
+    "@react-native-community/bob": "^0.14.5",
     "@react-native-community/eslint-config": "^0.0.7",
     "eslint": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.2",
@@ -47,5 +53,22 @@
   },
   "bugs": {
     "url": "https://github.com/react-native-community/react-native-masked-view/issues"
-  }
+  },
+  "@react-native-community/bob": {
+    "source": "js",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs",
+        {
+          "copyFlow": true
+        }
+      ],
+      "module"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
 }
