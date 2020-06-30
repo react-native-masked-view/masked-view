@@ -11,17 +11,15 @@
 import React from 'react';
 import { View } from 'react-native';
 
+import { type MaskedViewProps } from './MaskedViewTypes';
+
 /**
  * MaskedView not implemented on Windows
  */
-export default class MaskedView extends React.Component {
+export default class MaskedView extends React.Component<MaskedViewProps> {
   render() {
     const { children, ...otherViewProps } = this.props;
 
-    return (
-      <View {...otherViewProps}>
-        {children}
-      </View>
-    );
+    return <View {...otherViewProps}>{children}</View>;
   }
 }
