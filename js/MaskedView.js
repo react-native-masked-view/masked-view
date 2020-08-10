@@ -11,7 +11,7 @@
 import React from 'react';
 import { View, StyleSheet, requireNativeComponent } from 'react-native';
 
-const RNCMaskedView = requireNativeComponent('RNCMaskedView');
+const RNCMaskedView = requireNativeComponent<any>('RNCMaskedView');
 
 import { type MaskedViewProps } from './MaskedViewTypes';
 
@@ -52,7 +52,7 @@ import { type MaskedViewProps } from './MaskedViewTypes';
  * transparent pixels block that content.
  *
  */
-class MaskedViewIOS extends React.Component<MaskedViewProps> {
+export default class MaskedView extends React.Component<MaskedViewProps> {
   _hasWarnedInvalidRenderMask = false;
 
   render() {
@@ -60,10 +60,9 @@ class MaskedViewIOS extends React.Component<MaskedViewProps> {
 
     if (!React.isValidElement(maskElement)) {
       if (!this._hasWarnedInvalidRenderMask) {
-        // eslint-disable-next-line no-console
         console.warn(
           'MaskedView: Invalid `maskElement` prop was passed to MaskedView. ' +
-            'Expected a React Element. No mask will render.'
+            'Expected a React Element. No mask will render.',
         );
         this._hasWarnedInvalidRenderMask = true;
       }
@@ -72,7 +71,6 @@ class MaskedViewIOS extends React.Component<MaskedViewProps> {
     }
 
     return (
-      // eslint-disable-next-line react/jsx-props-no-spreading
       <RNCMaskedView {...otherViewProps}>
         <View pointerEvents="none" style={StyleSheet.absoluteFill}>
           {maskElement}
@@ -82,5 +80,3 @@ class MaskedViewIOS extends React.Component<MaskedViewProps> {
     );
   }
 }
-
-module.exports = MaskedViewIOS;
