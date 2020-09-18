@@ -60,6 +60,11 @@ public class RNCMaskedView extends ReactViewGroup {
     maskView.setVisibility(View.INVISIBLE);
   }
 
+  public void setPorterDuffMode(String mode) {
+    PorterDuff.Mode porterDuffMode = PorterDuff.Mode.valueOf(mode);
+    mPorterDuffXferMode = new PorterDuffXfermode(porterDuffMode);
+  }
+
   public static Bitmap getBitmapFromView(final View view) {
     view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
 

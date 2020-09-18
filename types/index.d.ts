@@ -5,6 +5,25 @@ import * as ReactNative from 'react-native';
 
 interface MaskedViewProps extends ReactNative.ViewProps {
   maskElement: React.ReactElement;
+  porterDuffMode?:
+    | 'ADD'
+    | 'CLEAR'
+    | 'DARKEN'
+    | 'DST'
+    | 'DST_ATOP'
+    | 'DST_IN'
+    | 'DST_OUT'
+    | 'DST_OVER'
+    | 'LIGHTEN'
+    | 'MULTIPLY'
+    | 'OVERLAY'
+    | 'SCREEN'
+    | 'SRC'
+    | 'SRC_ATOP'
+    | 'SRC_IN'
+    | 'SRC_OUT'
+    | 'SRC_OVER'
+    | 'XOR';
 }
 /**
  * @see https://github.com/react-native-community/react-native-masked-view
