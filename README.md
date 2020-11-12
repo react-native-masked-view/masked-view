@@ -17,18 +17,18 @@ _Note: React Native MaskedView is not currently supported by Expo unless you "ej
 ## Getting Started
 
 ```
-$ yarn add @react-native-community/masked-view
+$ yarn add @react-native-masked-view/masked-view
 ```
 
 or
 
 ```
-$ npm install --save @react-native-community/masked-view
+$ npm install --save @react-native-masked-view/masked-view
 ```
 
 #### Using React Native >= 0.60
 
-Linking the package manually is not required anymore with [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md).
+Linking the package manually is not required anymore with [Autolinking](https://github.com/react-native-masked-view/cli/blob/master/docs/autolinking.md).
 
 - **iOS Platform:**
 
@@ -39,17 +39,17 @@ Linking the package manually is not required anymore with [Autolinking](https://
 You then need to link the native parts of the library for the platforms you are using. The easiest way to link the library is using the CLI tool by running this command from the root of your project:
 
 ```
-$ react-native link @react-native-community/masked-view
+$ react-native link @react-native-masked-view/masked-view
 ```
 
 ## Usage
 
-Import the `MaskedView` component from `@react-native-community/masked-view` and use it like so:
+Import the `MaskedView` component from `@react-native-masked-view/masked-view` and use it like so:
 
 ```jsx
 import React from 'react';
 import { Text, View } from 'react-native';
-import MaskedView from '@react-native-community/masked-view';
+import MaskedView from '@react-native-masked-view/masked-view';
 
 export default class App extends React.Component {
   render() {
@@ -63,14 +63,14 @@ export default class App extends React.Component {
               backgroundColor: 'transparent',
               flex: 1,
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <Text
               style={{
                 fontSize: 60,
                 color: 'black',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
               }}
             >
               Basic Mask
@@ -111,11 +111,11 @@ The following image demonstrates that you can put almost anything behind the mas
 
 <!-- badges -->
 
-[build-badge]: https://img.shields.io/circleci/project/github/react-native-community/react-native-masked-view/master.svg?style=flat-square
-[build]: https://circleci.com/gh/react-native-community/react-native-masked-view
-[version-badge]: https://img.shields.io/npm/v/@react-native-community/masked-view.svg?style=flat-square
-[package]: https://www.npmjs.com/package/@react-native-community/masked-view
-[license-badge]: https://img.shields.io/npm/l/@react-native-community/masked-view.svg?style=flat-square
+[build-badge]: https://github.com/react-native-masked-view/masked-view/workflows/Build/badge.svg
+[build]: https://github.com/react-native-masked-view/masked-view/actions
+[version-badge]: https://img.shields.io/npm/v/@react-native-masked-view/masked-view.svg?style=flat-square
+[package]: https://www.npmjs.com/package/@react-native-masked-view/masked-view
+[license-badge]: https://img.shields.io/npm/l/@react-native-masked-view/masked-view.svg?style=flat-square
 [license]: https://opensource.org/licenses/MIT
 [lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
 [lean-core-issue]: https://github.com/facebook/react-native/issues/23313
