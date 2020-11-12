@@ -111,8 +111,8 @@ The following image demonstrates that you can put almost anything behind the mas
 
 <!-- badges -->
 
-[build-badge]: https://img.shields.io/circleci/project/github/react-native-masked-view/react-native-masked-view/master.svg?style=flat-square
-[build]: https://circleci.com/gh/react-native-masked-view/react-native-masked-view
+[build-badge]: https://github.com/react-native-masked-view/masked-view/workflows/Build/badge.svg
+[build]: https://github.com/react-native-masked-view/masked-view/actions
 [version-badge]: https://img.shields.io/npm/v/@react-native-masked-view/masked-view.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@react-native-masked-view/masked-view
 [license-badge]: https://img.shields.io/npm/l/@react-native-masked-view/masked-view.svg?style=flat-square
