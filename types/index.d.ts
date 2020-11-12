@@ -11,7 +11,7 @@ interface MaskedViewProps extends ReactNative.ViewProps {
  */
 declare class MaskedViewComponent extends React.Component<MaskedViewProps> {}
 declare const MaskedViewBase: ReactNative.Constructor<
-  ReactNative.NativeMethodsMixin
+  ReactNative.NativeMethods
 > &
   typeof MaskedViewComponent;
 export default class MaskedView extends MaskedViewBase {}
