@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = package['homepage']
   s.platforms    = { :ios => "9.0", :tvos => "9.0" }
 
-  s.source       = { :git => "https://github.com/react-native-community/react-native-masked-view.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/react-native-masked-view/react-native-masked-view.git", :tag => "v#{s.version}" }
   s.source_files  = "ios/**/*.{h,m}"
 
   s.dependency 'React-Core'
