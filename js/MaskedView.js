@@ -8,12 +8,12 @@
  * @format
  */
 
-import React from 'react';
+import * as React from 'react';
 import { View, StyleSheet, requireNativeComponent } from 'react-native';
 
 const RNCMaskedView = requireNativeComponent<any>('RNCMaskedView');
 
-import { type MaskedViewProps } from './MaskedViewTypes';
+import type { MaskedViewProps } from './MaskedViewTypes';
 
 /**
  * Renders the child view with a mask specified in the `maskElement` prop.
@@ -55,7 +55,7 @@ import { type MaskedViewProps } from './MaskedViewTypes';
 export default class MaskedView extends React.Component<MaskedViewProps> {
   _hasWarnedInvalidRenderMask = false;
 
-  render() {
+  render(): React.Node {
     const { maskElement, children, ...otherViewProps } = this.props;
 
     if (!React.isValidElement(maskElement)) {
@@ -66,7 +66,6 @@ export default class MaskedView extends React.Component<MaskedViewProps> {
         );
         this._hasWarnedInvalidRenderMask = true;
       }
-      // $FlowFixMe
       return <View {...otherViewProps}>{children}</View>;
     }
 
