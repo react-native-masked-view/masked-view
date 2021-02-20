@@ -66,6 +66,12 @@ public class RNCMaskedView extends ReactViewGroup {
     }
   }
 
+  @Override
+  protected void onAttachedToWindow() {
+    super.onAttachedToWindow();
+    mBitmapMaskInvalidated = true;
+  }
+
   private void updateBitmapMask() {
     if (this.mBitmapMask != null) {
       this.mBitmapMask.recycle();
