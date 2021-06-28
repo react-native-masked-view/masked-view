@@ -51,8 +51,10 @@ public class RNCMaskedView extends ReactViewGroup {
 
     if (!mBitmapMaskInvalidated) {
       View maskView = getChildAt(0);
-      if (maskView.equals(child)) {
-        mBitmapMaskInvalidated = true;
+      if (maskView != null) {
+        if (maskView.equals(child)) {
+          mBitmapMaskInvalidated = true;
+        }
       }
     }
   }
@@ -78,9 +80,13 @@ public class RNCMaskedView extends ReactViewGroup {
     }
 
     View maskView = getChildAt(0);
-    maskView.setVisibility(View.VISIBLE);
-    this.mBitmapMask = getBitmapFromView(maskView);
-    maskView.setVisibility(View.INVISIBLE);
+    if (maskView != null) {
+      maskView.setVisibility(View.VISIBLE);
+      this.mBitmapMask = getBitmapFromView(maskView);
+      maskView.setVisibility(View.INVISIBLE);
+    } else{
+      this.mBitmapMask = null;
+    }
   }
 
   public static Bitmap getBitmapFromView(final View view) {
