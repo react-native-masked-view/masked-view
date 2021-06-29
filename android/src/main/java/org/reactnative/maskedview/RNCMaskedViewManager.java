@@ -27,4 +27,9 @@ public class RNCMaskedViewManager extends ViewGroupManager<RNCMaskedView> {
   protected RNCMaskedView createViewInstance(ThemedReactContext themedReactContext) {
     return new RNCMaskedView(themedReactContext);
   }
+
+  @ReactProp(name = "porterDuffMode")
+  public void setPorterDuffMode(RNCMaskedView view, String mode) {
+    view.setPorterDuffMode(mode);
+  }
 }
