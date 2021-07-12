@@ -5,6 +5,7 @@ import * as ReactNative from 'react-native';
 
 interface MaskedViewProps extends ReactNative.ViewProps {
   maskElement: React.ReactElement;
+  androidRenderingMode?: 'software' | 'hardware';
 }
 /**
  * @see https://github.com/react-native-masked-view/masked-view
