@@ -107,6 +107,14 @@ The following image demonstrates that you can put almost anything behind the mas
 | ------- | -------- |
 | element | Yes      |
 
+### `androidRenderingMode`
+
+By default `hardware` rendering mode will be used for best performance, however if you need to animate your `maskElement` then you’ll need to switch to `software` to get your mask to update. This prop only affects Android.
+
+| Type                   | Required | Default    |
+| ---------------------- | -------- | ---------- |
+| `software`, `hardware` | No       | `hardware` |
+
 <!-- badges -->
 
 [build-badge]: https://github.com/react-native-masked-view/masked-view/workflows/Build/badge.svg

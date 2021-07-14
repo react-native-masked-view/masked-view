@@ -10,4 +10,8 @@ export type MaskedViewProps = typeof ViewPropTypes &
      * mask for the child element.
      */
     maskElement: Element<any>,
+    /**
+     * Opt into software rendering to enable animated masks.
+     */
+    androidRenderingMode?: 'software' | 'hardware',
   |}>;
