@@ -3,7 +3,7 @@
 import * as React from 'react';
 import * as ReactNative from 'react-native';
 
-interface MaskedViewProps extends ReactNative.ViewProps {
+export interface MaskedViewProps extends ReactNative.ViewProps {
   maskElement: React.ReactElement;
   androidRenderingMode?: 'software' | 'hardware';
 }
