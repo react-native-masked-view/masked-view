@@ -25,7 +25,7 @@ public class RNCMaskedViewManager extends ViewGroupManager<RNCMaskedView> {
 
   @Override
   protected RNCMaskedView createViewInstance(ThemedReactContext themedReactContext) {
-    return RNCMaskedViewManagerImpl.createViewInstance();
+    return RNCMaskedViewManagerImpl.createViewInstance(themedReactContext);
   }
 
   @ReactProp(name = "androidRenderingMode")
