@@ -2,7 +2,8 @@
   "name": "@react-native-masked-view/masked-view",
   "description": "React Native MaskedView component",
   "types": "./types/index.d.ts",
-  "main": "index.js",
+  "react-native": "src/index",
+  "source": "src/index",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
   "version": "0.2.6",
@@ -25,10 +26,9 @@
     "react-native": "*"
   },
   "files": [
-    "index.js",
+    "src",
     "android",
     "ios",
-    "js",
     "types",
     "RNCMaskedView.podspec",
     "!android/build",
