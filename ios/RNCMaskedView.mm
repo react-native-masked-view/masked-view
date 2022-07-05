@@ -65,5 +65,10 @@ using namespace facebook::react;
   // stub this method and override the default implementation.
 }
 
+Class<RCTComponentViewProtocol> MaskedViewCls(void)
+{
+  return RNMaskedView.class;
+}
+
 @end
 #endif

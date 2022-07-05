@@ -10,7 +10,7 @@ buildscript {
     }
 
     dependencies {
-      classpath 'com.android.tools.build:gradle:4.1.2'
+      classpath 'com.android.tools.build:gradle:7.0.4'
     }
   }
 }
@@ -18,16 +18,21 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion safeExtGet('compileSdkVersion', 28)
+  compileSdkVersion safeExtGet('compileSdkVersion', 31)
 
   defaultConfig {
-    minSdkVersion safeExtGet('minSdkVersion', 16)
-    targetSdkVersion safeExtGet('targetSdkVersion', 28)
+    minSdkVersion safeExtGet('minSdkVersion', 21)
+    targetSdkVersion safeExtGet('targetSdkVersion', 31)
+    buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
   }
 
   sourceSets {
     main {
-      java.srcDirs = ['src/main/java']
+      if (isNewArchitectureEnabled()) {
+        java.srcDirs += ['src/newarch']
+      } else {
+        java.srcDirs += ['src/oldarch']
+      }
     }
   }
 
@@ -47,7 +52,7 @@ repositories {
   mavenCentral()
   maven {
     // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-    url "$rootDir/../node_modules/react-native/android"
+    url "$projectDir/../node_modules/react-native/android"
   }
 }
 
