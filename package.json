@@ -21,7 +21,7 @@
     "test:prettier": "prettier --check './**/*.js'"
   },
   "peerDependencies": {
-    "react": "16 || 17",
+    "react": ">=16",
     "react-native": ">=0.57"
   },
   "files": [
