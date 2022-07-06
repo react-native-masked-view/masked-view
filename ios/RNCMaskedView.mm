@@ -5,9 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+#import "RNCMaskedView.h"
+
 // This guard prevent the code from being compiled in the old architecture
 #ifdef RCT_NEW_ARCH_ENABLED
-#import "RNCMaskedView.h"
 
 #import <react/renderer/components/RNCMaskedViewSpec/ComponentDescriptors.h>
 #import <react/renderer/components/RNCMaskedViewSpec/EventEmitters.h>
@@ -72,9 +73,15 @@ Class<RCTComponentViewProtocol> RNCMaskedViewCls(void)
 
 @end
 #else
-#import "RNCMaskedView.h"
 
 #import <React/UIView+React.h>
+#import <UIKit/UIKit.h>
+
+#import <React/RCTView.h>
+
+@interface RNCMaskedView : RCTView
+
+@end
 
 @implementation RNCMaskedView
 
