@@ -22,10 +22,14 @@ return [[UIView alloc] init];
 
 @end
 #else
+#import <UIKit/UIKit.h>
 
-#import "RNCMaskedViewManager.h"
-
+#import <React/RCTView.h>
 #import "RNCMaskedView.h"
+
+@interface RNCMaskedView : RCTView
+
+@end
 
 @implementation RNCMaskedViewManager
 
