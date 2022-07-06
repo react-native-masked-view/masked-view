@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "homepage": "https://github.com/react-native-masked-view/masked-view#readme",
   "keywords": [
     "react-native",
@@ -21,7 +21,7 @@
     "test:prettier": "prettier --check './**/*.js'"
   },
   "peerDependencies": {
-    "react": "16 || 17",
+    "react": ">=16",
     "react-native": ">=0.57"
   },
   "files": [
