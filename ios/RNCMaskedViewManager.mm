@@ -13,7 +13,7 @@
 
 @implementation RNCMaskedViewManager
 
-RCT_EXPORT_MODULE(MaskedView)
+RCT_EXPORT_MODULE(RNCMaskedView)
 
 - (UIView *)view
 {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2150303C220DFE9200FC1971 /* RNCMaskedViewManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2150303B220DFE9200FC1971 /* RNCMaskedViewManager.mm */; };
 		B3E7B58A1CC2AC0600A0062D /* RNCMaskedView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNCMaskedView.mm */; };
+		C322A9E42875BD68002D9F3E /* RNCMaskedView.h in Sources */ = {isa = PBXBuildFile; fileRef = C36BE1CC28748506007894DF /* RNCMaskedView.h */; };
+		C322A9E52875BD6B002D9F3E /* libRNCMaskedView.a in Sources */ = {isa = PBXBuildFile; fileRef = 134814201AA4EA6300B7C361 /* libRNCMaskedView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -116,6 +118,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C322A9E52875BD6B002D9F3E /* libRNCMaskedView.a in Sources */,
+				C322A9E42875BD68002D9F3E /* RNCMaskedView.h in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNCMaskedView.mm in Sources */,
 				2150303C220DFE9200FC1971 /* RNCMaskedViewManager.mm in Sources */,
 			);
