@@ -22,12 +22,13 @@ import java.util.Map;
 
 @ReactModule(name = RNCMaskedViewManagerImpl.NAME)
 public class RNCMaskedViewManager extends ViewGroupManager<RNCMaskedView> {
+  /* 
   ReactApplicationContext mCallerContext;
 
   public RNCMaskedViewManager(ReactApplicationContext reactContext) {
       mCallerContext = reactContext;
   }
-
+*/
   @Override
   public String getName() {
     return RNCMaskedViewManagerImpl.NAME;
