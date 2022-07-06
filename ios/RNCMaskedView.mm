@@ -19,7 +19,7 @@
 
 using namespace facebook::react;
 
-@interface RNCMaskedView () <RCTMaskedViewViewProtocol>
+@interface RNCMaskedView () <RCTRNCMaskedViewViewProtocol>
 
 @end
 
