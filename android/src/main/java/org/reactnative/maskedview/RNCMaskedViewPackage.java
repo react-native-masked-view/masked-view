@@ -18,8 +18,8 @@ public class RNCMaskedViewPackage implements ReactPackage {
 
   @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactApplicationContext) {
-      return Arrays.<ViewManager>asList(
-            new RNCMaskedViewManager()
-      );
+    List<ViewManager> viewManagers = new ArrayList<>();
+    viewManagers.add(new RNCMaskedViewManager(reactApplicationContext));
+    return viewManagers;
   }
 }
