@@ -56,5 +56,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "codegenConfig": {
+    "libraries": [
+        {
+        "name": "RNCMaskedViewSpec",
+        "type": "components",
+        "jsSrcsDir": "src"
+        }
+    ]
   }
 }

@@ -3,7 +3,7 @@
 #import <React/RCTViewComponentView.h>
 #import <UIKit/UIKit.h>
 
-#ifndef NativeComponentExampleComponentView_h
+#ifndef NativeComponentExampleCompontView_h
 #define NativeComponentExampleComponentView_h
 
 NS_ASSUME_NONNULL_BEGIN
