@@ -21,9 +21,16 @@ import java.util.Map;
 @ReactModule(name = RNCMaskedViewManagerImpl.NAME)
 public class RNCMaskedViewManager extends ViewGroupManager<RNCMaskedView> {
   ReactApplicationContext mCallerContext;
+  private final ViewManagerDelegate<RNCMaskedView> mDelegate;
 
   public RNCMaskedViewManager(ReactApplicationContext reactContext) {
       mCallerContext = reactContext;
+  }
+
+  @Nullable
+  @Override
+  protected ViewManagerDelegate<RNCMaskedView> getDelegate() {
+      return mDelegate;
   }
 
   @Override
@@ -32,8 +39,8 @@ public class RNCMaskedViewManager extends ViewGroupManager<RNCMaskedView> {
   }
 
   @Override
-  protected RNCMaskedView createViewInstance(ThemedReactContext themedReactContext) {
-    return RNCMaskedViewImpl.createViewInstance(themedReactContext);
+  protected RNCMaskedView createViewInstance(@NonNull ThemedReactContext themedReactContext) {
+    return RNCMaskedViewManagerImpl.createViewInstance(themedReactContext);
   }
 
   @ReactProp(name = "androidRenderingMode")
