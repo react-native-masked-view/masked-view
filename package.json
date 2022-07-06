@@ -6,7 +6,7 @@
   "source": "src/index",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "homepage": "https://github.com/react-native-masked-view/masked-view#readme",
   "keywords": [
     "react-native",
