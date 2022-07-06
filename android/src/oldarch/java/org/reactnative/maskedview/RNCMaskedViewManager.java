@@ -17,22 +17,19 @@ import java.util.List;
 import java.util.Map;
 
 public class RNCMaskedViewManager extends ViewGroupManager<RNCMaskedView> {
-  private static final String REACT_CLASS = "RNCMaskedView";
 
   @Override
   public String getName() {
-    return REACT_CLASS;
+    return RNCMaskedViewManagerImpl.NAME;
   }
 
   @Override
   protected RNCMaskedView createViewInstance(ThemedReactContext themedReactContext) {
-    return new RNCMaskedView(themedReactContext);
+    return RNCMaskedViewManagerImpl.createViewInstance(themedReactContext);
   }
 
   @ReactProp(name = "androidRenderingMode")
   public void setAndroidRenderingMode(RNCMaskedView view, @Nullable String renderingMode) {
-    if (renderingMode != null) {
-      view.setRenderingMode(renderingMode);
-    }
+    RNCMaskedViewManagerImpl.setAndroidRenderingMode(view, renderingMode);
   }
 }

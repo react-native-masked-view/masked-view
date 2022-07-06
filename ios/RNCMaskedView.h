@@ -1,14 +1,17 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
+// This guard prevent this file to be compiled in the old architecture.
+#ifdef RCT_NEW_ARCH_ENABLED
+#import <React/RCTViewComponentView.h>
 #import <UIKit/UIKit.h>
 
-#import <React/RCTView.h>
+#ifndef NativeComponentExampleComponentView_h
+#define NativeComponentExampleComponentView_h
 
-@interface RNCMaskedView : RCTView
+NS_ASSUME_NONNULL_BEGIN
 
+@interface RNCMaskedView : RCTViewComponentView
 @end
+
+NS_ASSUME_NONNULL_END
+
+#endif /* NativeComponentExampleComponentView_h */
+#endif /* RCT_NEW_ARCH_ENABLED */

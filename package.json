@@ -2,7 +2,8 @@
   "name": "@react-native-masked-view/masked-view",
   "description": "React Native MaskedView component",
   "types": "./types/index.d.ts",
-  "main": "index.js",
+  "react-native": "src/index",
+  "source": "src/index",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
   "version": "0.2.6",
@@ -21,25 +22,29 @@
     "test:prettier": "prettier --check './**/*.js'"
   },
   "peerDependencies": {
-    "react": "16 || 17",
-    "react-native": ">=0.57"
+    "react": "*",
+    "react-native": "*"
   },
   "files": [
-    "index.js",
+    "src",
     "android",
     "ios",
-    "js",
     "types",
-    "RNCMaskedView.podspec"
+    "RNCMaskedView.podspec",
+    "!android/build",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
   ],
   "dependencies": {},
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
-    "@types/react-native": "^0.63.50",
+    "@types/react-native": "^0.69.2",
     "eslint": "^7.20.0",
     "flow-bin": "^0.145.0",
     "prettier": "^2.2.1",
-    "react-native": "^0.63.4",
+    "react-native": "^0.69.1",
     "typescript": "^4.1.5"
   },
   "repository": {
