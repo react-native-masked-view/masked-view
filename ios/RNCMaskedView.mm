@@ -9,16 +9,16 @@
 #ifdef RCT_NEW_ARCH_ENABLED
 #import "RNCMaskedView.h"
 
-#import <react/renderer/components/RNColoredViewSpec/ComponentDescriptors.h>
-#import <react/renderer/components/RNColoredViewSpec/EventEmitters.h>
-#import <react/renderer/components/RNColoredViewSpec/Props.h>
-#import <react/renderer/components/RNColoredViewSpec/RCTComponentViewHelpers.h>
+#import <react/renderer/components/RNCMaskedViewSpec/ComponentDescriptors.h>
+#import <react/renderer/components/RNCMaskedViewSpec/EventEmitters.h>
+#import <react/renderer/components/RNCMaskedViewSpec/Props.h>
+#import <react/renderer/components/RNCMaskedViewSpec/RCTComponentViewHelpers.h>
 
 #import "RCTFabricComponentsPlugins.h"
 
 using namespace facebook::react;
 
-@interface RNCMaskedView () <RCTColoredViewViewProtocol>
+@interface RNCMaskedView () <RCTMaskedViewViewProtocol>
 
 @end
 
@@ -28,13 +28,13 @@ using namespace facebook::react;
 
 + (ComponentDescriptorProvider)componentDescriptorProvider
 {
-    return concreteComponentDescriptorProvider<ColoredViewComponentDescriptor>();
+    return concreteComponentDescriptorProvider<RNCMaskedViewComponentDescriptor>();
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
   if (self = [super initWithFrame:frame]) {
-    static const auto defaultProps = std::make_shared<const ColoredViewProps>();
+    static const auto defaultProps = std::make_shared<const RNCMaskedViewProps>();
     _props = defaultProps;
 
     _view = [[UIView alloc] init];
@@ -65,9 +65,9 @@ using namespace facebook::react;
   // stub this method and override the default implementation.
 }
 
-Class<RCTComponentViewProtocol> MaskedViewCls(void)
+Class<RCTComponentViewProtocol> RNCMaskedViewCls(void)
 {
-  return RNMaskedView.class;
+  return RNCMaskedView.class;
 }
 
 @end
