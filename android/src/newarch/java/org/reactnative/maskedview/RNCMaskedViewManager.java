@@ -2,6 +2,8 @@ package org.reactnative.maskedview;
 
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.facebook.react.bridge.ReadableArray;
@@ -21,16 +23,9 @@ import java.util.Map;
 @ReactModule(name = RNCMaskedViewManagerImpl.NAME)
 public class RNCMaskedViewManager extends ViewGroupManager<RNCMaskedView> {
   ReactApplicationContext mCallerContext;
-  private final ViewManagerDelegate<RNCMaskedView> mDelegate;
 
   public RNCMaskedViewManager(ReactApplicationContext reactContext) {
       mCallerContext = reactContext;
-  }
-
-  @Nullable
-  @Override
-  protected ViewManagerDelegate<RNCMaskedView> getDelegate() {
-      return mDelegate;
   }
 
   @Override
