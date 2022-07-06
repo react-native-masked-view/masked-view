@@ -6,6 +6,7 @@
  */
 
 #import "RNCMaskedView.h"
+#import <React/UIView+React.h>
 
 // This guard prevent the code from being compiled in the old architecture
 #ifdef RCT_NEW_ARCH_ENABLED
@@ -19,17 +20,8 @@
 
 using namespace facebook::react;
 
-@interface RNCMaskedView () <RCTRNCMaskedViewViewProtocol>
-
-@end
-
 @implementation RNCMaskedView {
     UIView * _view;
-}
-
-+ (ComponentDescriptorProvider)componentDescriptorProvider
-{
-    return concreteComponentDescriptorProvider<RNCMaskedViewComponentDescriptor>();
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -55,15 +47,20 @@ using namespace facebook::react;
   // Add the other subviews to the view hierarchy
   for (NSUInteger i = 1; i < self.reactSubviews.count; i++) {
     UIView *subview = [self.reactSubviews objectAtIndex:i];
-    [self addSubview:subview];
+    [_view addSubview:subview];
   }
 }
 
-- (void)displayLayer:(CALayer *)layer
+#pragma mark - RCTComponentViewProtocol
+
+- (void)prepareForRecycle
 {
-  // RCTView uses displayLayer to do border rendering.
-  // We don't need to do that in RNCMaskedView, so we
-  // stub this method and override the default implementation.
+  [super prepareForRecycle];
+}
+
++ (ComponentDescriptorProvider)componentDescriptorProvider
+{
+    return concreteComponentDescriptorProvider<RNCMaskedViewComponentDescriptor>();
 }
 
 Class<RCTComponentViewProtocol> RNCMaskedViewCls(void)
@@ -74,9 +71,7 @@ Class<RCTComponentViewProtocol> RNCMaskedViewCls(void)
 @end
 #else
 
-#import <React/UIView+React.h>
 #import <UIKit/UIKit.h>
-
 #import <React/RCTView.h>
 
 @interface RNCMaskedView : RCTView

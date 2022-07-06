@@ -10,6 +10,7 @@
 @end
 
 #ifdef RCT_NEW_ARCH_ENABLED
+#import "RNCMaskedView.h"
 @implementation RNCMaskedViewManager
 
 RCT_EXPORT_MODULE(RNCMaskedView)
