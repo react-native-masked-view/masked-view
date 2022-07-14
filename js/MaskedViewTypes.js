@@ -1,8 +1,8 @@
 // @flow
 import { type Node, type Element } from 'react';
-import { ViewPropTypes } from 'react-native';
+import { type ViewProps } from 'react-native/Libraries/Components/View/ViewPropTypes';
 
-export type MaskedViewProps = typeof ViewPropTypes &
+export type MaskedViewProps = $Shape<ViewProps> &
   $ReadOnly<{|
     children: Node,
     /**
