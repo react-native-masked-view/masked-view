@@ -11,6 +11,7 @@ Provides a React component that renders a masked view.
 
 - [x] iOS
 - [x] Android
+- [ ] Web
 
 ## Getting Started
 
