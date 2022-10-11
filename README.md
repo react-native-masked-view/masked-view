@@ -98,11 +98,11 @@ The following image demonstrates that you can put almost anything behind the mas
 
 - [View props...](https://github.com/facebook/react-native-website/blob/master/docs/view.md#props)
 
-* [`maskElement`](#maskelement)
+- [`maskElement`](#maskelement)
 
-# Reference
+- [`androidRenderingMode`](#androidrenderingmode)
 
-## Props
+### Reference
 
 ### `maskElement`
 
