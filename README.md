@@ -14,13 +14,13 @@ React Native MaskedView for iOS and Android.
 
 ## Getting Started
 
-```
+```sh
 yarn add @react-native-masked-view/masked-view
 ```
 
 or
 
-```
+```sh
 npm install --save @react-native-masked-view/masked-view
 ```
 
@@ -28,15 +28,17 @@ npm install --save @react-native-masked-view/masked-view
 
 Linking the package manually is not required anymore with [Autolinking](https://github.com/react-native-masked-view/cli/blob/master/docs/autolinking.md).
 
-- **iOS Platform:**
+Remember to install the pod with:
 
-  `npx pod-install`
+```sh
+npx pod-install
+```
 
 #### Using React Native < 0.60
 
 You then need to link the native parts of the library for the platforms you are using. The easiest way to link the library is using the CLI tool by running this command from the root of your project:
 
-```
+```sh
 react-native link @react-native-masked-view/masked-view
 ```
 
