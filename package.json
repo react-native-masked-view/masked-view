@@ -32,7 +32,6 @@
     "types",
     "RNCMaskedView.podspec"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/react-native": "^0.63.50",
@@ -51,5 +50,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }
