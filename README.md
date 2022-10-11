@@ -1,4 +1,4 @@
-# React Native MaskedView
+# React Native `MaskedView`
 
 [![Build Status][build-badge]][build]
 [![Version][version-badge]][package]
@@ -25,7 +25,7 @@ or
 npm install --save @react-native-masked-view/masked-view
 ```
 
-#### Using React Native >= 0.60
+### Using React Native >= 0.60
 
 Linking the package manually is not required anymore with [Autolinking](https://github.com/react-native-masked-view/cli/blob/master/docs/autolinking.md).
 
@@ -35,7 +35,7 @@ Remember to install the pod with:
 npx pod-install
 ```
 
-#### Using React Native < 0.60
+### Using React Native < 0.60
 
 You then need to link the native parts of the library for the platforms you are using. The easiest way to link the library is using the CLI tool by running this command from the root of your project:
 
