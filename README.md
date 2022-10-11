@@ -5,7 +5,7 @@
 [![MIT License][license-badge]][license]
 [![Lean Core Badge][lean-core-badge]][lean-core-issue]
 
-React Native MaskedView for iOS and Android.
+Provides a React component that renders a masked view.
 
 ## Platforms Supported
 
