@@ -92,7 +92,7 @@ export default App
 
 The following image demonstrates that you can put almost anything behind the mask. The three examples shown are masked `<View>`, `<Text>`, and `<Image>`.
 
-<p align="center"><img src="img/example.png" width="200"></img></p>
+<div align="center"><img src="img/example.png" width="200"></img></div>
 
 ### Props
 
