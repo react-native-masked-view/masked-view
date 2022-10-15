@@ -1,42 +1,45 @@
-# React Native MaskedView
+# React Native `MaskedView`
 
 [![Build Status][build-badge]][build]
 [![Version][version-badge]][package]
 [![MIT License][license-badge]][license]
 [![Lean Core Badge][lean-core-badge]][lean-core-issue]
 
-React Native MaskedView for iOS and Android.
+Provides a React component that renders a masked view.
 
 ## Platforms Supported
 
 - [x] iOS
 - [x] Android
+- [ ] Web
 
 ## Getting Started
 
-```
+```sh
 yarn add @react-native-masked-view/masked-view
 ```
 
 or
 
-```
+```sh
 npm install --save @react-native-masked-view/masked-view
 ```
 
-#### Using React Native >= 0.60
+### Using React Native >= 0.60
 
 Linking the package manually is not required anymore with [Autolinking](https://github.com/react-native-masked-view/cli/blob/master/docs/autolinking.md).
 
-- **iOS Platform:**
+Remember to install the pod with:
 
-  `npx pod-install`
+```sh
+npx pod-install
+```
 
-#### Using React Native < 0.60
+### Using React Native < 0.60
 
 You then need to link the native parts of the library for the platforms you are using. The easiest way to link the library is using the CLI tool by running this command from the root of your project:
 
-```
+```sh
 react-native link @react-native-masked-view/masked-view
 ```
 
@@ -49,57 +52,57 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import MaskedView from '@react-native-masked-view/masked-view';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <MaskedView
-        style={{ flex: 1, flexDirection: 'row', height: '100%' }}
-        maskElement={
-          <View
+const App = () => {
+  return (
+    <MaskedView
+      style={{ flex: 1, flexDirection: 'row', height: '100%' }}
+      maskElement={
+        <View
+          style={{
+            // Transparent background because mask is based off alpha channel.
+            backgroundColor: 'transparent',
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Text
             style={{
-              // Transparent background because mask is based off alpha channel.
-              backgroundColor: 'transparent',
-              flex: 1,
-              justifyContent: 'center',
-              alignItems: 'center',
+              fontSize: 60,
+              color: 'black',
+              fontWeight: 'bold',
             }}
           >
-            <Text
-              style={{
-                fontSize: 60,
-                color: 'black',
-                fontWeight: 'bold',
-              }}
-            >
-              Basic Mask
-            </Text>
-          </View>
-        }
-      >
-        {/* Shows behind the mask, you can put anything here, such as an image */}
-        <View style={{ flex: 1, height: '100%', backgroundColor: '#324376' }} />
-        <View style={{ flex: 1, height: '100%', backgroundColor: '#F5DD90' }} />
-        <View style={{ flex: 1, height: '100%', backgroundColor: '#F76C5E' }} />
-        <View style={{ flex: 1, height: '100%', backgroundColor: '#e1e1e1' }} />
-      </MaskedView>
-    );
-  }
+            Basic Mask
+          </Text>
+        </View>
+      }
+    >
+      {/* Shows behind the mask, you can put anything here, such as an image */}
+      <View style={{ flex: 1, height: '100%', backgroundColor: '#324376' }} />
+      <View style={{ flex: 1, height: '100%', backgroundColor: '#F5DD90' }} />
+      <View style={{ flex: 1, height: '100%', backgroundColor: '#F76C5E' }} />
+      <View style={{ flex: 1, height: '100%', backgroundColor: '#e1e1e1' }} />
+    </MaskedView>
+  );
 }
+
+export default App
 ```
 
 The following image demonstrates that you can put almost anything behind the mask. The three examples shown are masked `<View>`, `<Text>`, and `<Image>`.
 
-<p align="center"><img src="img/example.png" width="200"></img></p>
+<div align="center"><img src="img/example.png" width="200"></img></div>
 
 ### Props
 
 - [View props...](https://github.com/facebook/react-native-website/blob/master/docs/view.md#props)
 
-* [`maskElement`](#maskelement)
+- [`maskElement`](#maskelement)
 
-# Reference
+- [`androidRenderingMode`](#androidrenderingmode)
 
-## Props
+### Reference
 
 ### `maskElement`
 
