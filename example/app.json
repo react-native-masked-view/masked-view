@@ -1,10 +1,18 @@
 {
-  "name": "masked-view-example",
+  "name": "MaskedViewExample",
   "displayName": "MaskedViewExample",
   "components": [
     {
-      "appKey": "masked-view-example",
-      "displayName": "MaskedViewExample"
+      "appKey": "MaskedViewExample",
+      "displayName": "Base example"
+    },
+    {
+      "appKey": "MaskedViewImageExample",
+      "displayName": "Image example"
+    },
+    {
+      "appKey": "MaskedViewTextExample",
+      "displayName": "Text example"
     }
   ],
   "resources": {
