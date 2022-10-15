@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-masked-view/masked-view": "file:..",
     "react": "18.1.0",
     "react-native": "0.70.3"
   },

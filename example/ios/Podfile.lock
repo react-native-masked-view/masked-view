@@ -354,6 +354,8 @@ PODS:
     - React-Core
     - React-jsi
   - ReactTestApp-Resources (1.0.0-dev)
+  - RNCMaskedView (0.2.8):
+    - React-Core
   - SocketRocket (0.6.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -417,6 +419,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactTestApp-DevSupport (from `../node_modules/react-native-test-app`)
   - ReactTestApp-Resources (from `..`)
+  - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -504,6 +507,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-test-app"
   ReactTestApp-Resources:
     :path: ".."
+  RNCMaskedView:
+    :path: "../node_modules/@react-native-masked-view/masked-view"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -554,6 +559,7 @@ SPEC CHECKSUMS:
   ReactCommon: 01064177e66d652192c661de899b1076da962fd9
   ReactTestApp-DevSupport: a88305defaebf56b89e7ff020e7b80b5a0f30e2a
   ReactTestApp-Resources: ff5f151e465e890010b417ce65ca6c5de6aeccbb
+  RNCMaskedView: bc0170f389056201c82a55e242e5d90070e18e5a
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Yoga: 2ed968a4f060a92834227c036279f2736de0fce3
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
