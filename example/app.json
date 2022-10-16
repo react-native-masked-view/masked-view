@@ -1,0 +1,24 @@
+{
+  "name": "MaskedViewExample",
+  "displayName": "MaskedViewExample",
+  "components": [
+    {
+      "appKey": "MaskedViewExample",
+      "displayName": "Base example"
+    },
+    {
+      "appKey": "MaskedViewImageExample",
+      "displayName": "Image example"
+    },
+    {
+      "appKey": "MaskedViewTextExample",
+      "displayName": "Text example"
+    }
+  ],
+  "resources": {
+    "android": ["dist/res", "dist/main.android.jsbundle"],
+    "ios": ["dist/assets", "dist/main.ios.jsbundle"],
+    "macos": ["dist/assets", "dist/main.macos.jsbundle"],
+    "windows": ["dist/assets", "dist/main.windows.bundle"]
+  }
+}
