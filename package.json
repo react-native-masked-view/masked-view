@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "homepage": "https://github.com/react-native-masked-view/masked-view#readme",
   "keywords": [
     "react-native",
