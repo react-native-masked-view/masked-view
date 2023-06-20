@@ -19,7 +19,7 @@ apply plugin: 'com.android.library'
 
 android {
   compileSdkVersion safeExtGet('compileSdkVersion', 28)
-
+  namespace = "org.reactnative.maskedview"
   defaultConfig {
     minSdkVersion safeExtGet('minSdkVersion', 16)
     targetSdkVersion safeExtGet('targetSdkVersion', 28)
