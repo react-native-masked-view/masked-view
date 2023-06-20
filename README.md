@@ -13,6 +13,13 @@ Provides a React component that renders a masked view.
 - [x] Android
 - [ ] Web
 
+## Supported Versions
+
+| MaskedView | React Native |
+| --- | --- |
+| > 1.0.0 | >= 0.71 |
+| < 0.2.9 | > = 0.57 |
+
 ## Getting Started
 
 ```sh
