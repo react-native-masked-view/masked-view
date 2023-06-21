@@ -17,9 +17,34 @@ buildscript {
 
 apply plugin: 'com.android.library'
 
+def agpVersion = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')[0].toInteger()
+def shouldUseNameSpace = agpVersion >= 7
+def PACKAGE_PROP = "package=\"org.reactnative.maskedview\""
+def manifestOutFile = file("${projectDir}/src/main/AndroidManifest.xml")
+def manifestContent = manifestOutFile.getText()
+if(shouldUseNameSpace){
+      manifestContent = manifestContent.replaceAll(
+        PACKAGE_PROP,
+        ''
+    )  
+} else {
+    if(!manifestContent.contains("$PACKAGE_PROP")){
+        manifestContent = manifestContent.replace(
+            '<manifest',
+            "<manifest $PACKAGE_PROP "
+        )
+    }
+}
+manifestContent.replaceAll("  ", " ")
+manifestOutFile.write(manifestContent)
+
 android {
   compileSdkVersion safeExtGet('compileSdkVersion', 28)
-  namespace = "org.reactnative.maskedview"
+  
+  if(shouldUseNameSpace){
+    namespace = "org.reactnative.maskedview"
+  }
+
   defaultConfig {
     minSdkVersion safeExtGet('minSdkVersion', 16)
     targetSdkVersion safeExtGet('targetSdkVersion', 28)
