@@ -2,7 +2,7 @@
 import { type Node, type Element } from 'react';
 import { type ViewProps } from 'react-native/Libraries/Components/View/ViewPropTypes';
 
-export type MaskedViewProps = $Shape<ViewProps> &
+export type MaskedViewProps = Partial<ViewProps> &
   $ReadOnly<{|
     children: Node,
     /**

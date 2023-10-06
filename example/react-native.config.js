@@ -1,25 +1,18 @@
 const project = (() => {
-  const fs = require('fs');
-  const path = require('path');
   try {
-    const {
-      androidManifestPath,
-      iosProjectPath,
-      windowsProjectPath,
-    } = require('react-native-test-app');
-    const iosProject = iosProjectPath('ios');
-    return {
+    const { configureProjects } = require('react-native-test-app');
+    return configureProjects({
       android: {
         sourceDir: 'android',
-        manifestPath: androidManifestPath(path.join(__dirname, 'android')),
       },
-      windows: fs.existsSync('windows/MaskedViewExample.sln') && {
+      ios: {
+        sourceDir: 'ios',
+      },
+      windows: {
         sourceDir: 'windows',
-        solutionFile: 'MaskedViewExample.sln',
-        project: windowsProjectPath(path.join(__dirname, 'windows')),
+        solutionFile: 'windows/MaskedViewExample.sln',
       },
-      ...(iosProject ? { ios: { project: iosProject } } : undefined),
-    };
+    });
   } catch (_) {
     return undefined;
   }
