@@ -20,18 +20,29 @@ node_modules/warning/.*
 
 [include]
 
+[declarations]
+.*/node_modules/.*
+
 [libs]
+node_modules/react-native/interface.js
 node_modules/react-native/flow/
 
 [options]
+experimental.global_find_ref=true
+enums=true
+
 emoji=true
 
-esproposal.optional_chaining=enable
-esproposal.nullish_coalescing=enable
+exact_by_default=true
+
+format.bracket_spacing=false
 
 module.file_ext=.js
 module.file_ext=.json
-module.file_ext=.ios.js
+
+experimental.multi_platform=true
+experimental.multi_platform.extensions=.ios
+experimental.multi_platform.extensions=.android
 
 munge_underscores=true
 
@@ -43,6 +54,7 @@ suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
 suppress_type=$FlowFixMeProps
 suppress_type=$FlowFixMeState
+suppress_type=$FlowFixMeEmpty
 
 sharedmemory.heap_size=4000000000
 
@@ -52,11 +64,10 @@ sketchy-null-mixed=warn
 sketchy-number=warn
 untyped-type-import=warn
 nonstrict-import=warn
-deprecated-type=warn
+deprecated-type=error
 unsafe-getters-setters=warn
 unnecessary-invariant=warn
-signature-verification-failure=warn
-deprecated-utility=error
+unused-promise=error
 
 [strict]
 deprecated-type
@@ -68,4 +79,4 @@ untyped-import
 untyped-type-import
 
 [version]
-^0.145.0
+^0.218.0

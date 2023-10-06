@@ -1,10 +1,3 @@
-/**
- * Metro configuration for React Native
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 const path = require('path');
 
 const exclusionList = (() => {
@@ -34,7 +27,7 @@ const blockList = exclusionList([
   /.*\.ProjectImports\.zip/,
 ]);
 
-module.exports = {
+const config = {
   resolver: {
     blacklistRE: blockList,
     blockList,
@@ -48,3 +41,14 @@ module.exports = {
     }),
   },
 };
+
+try {
+  // Starting with react-native 0.72, we are required to provide a full config.
+  const {
+    getDefaultConfig,
+    mergeConfig,
+  } = require('@react-native/metro-config');
+  module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+} catch (_) {
+  module.exports = config;
+}
