@@ -39,8 +39,8 @@
     "eslint": "^7.20.0",
     "flow-bin": "^0.145.0",
     "prettier": "^2.2.1",
-    "react-native": "^0.63.4",
-    "react-native-test-app": "^2.0.0",
+    "react-native": "0.72.5",
+    "react-native-test-app": "^2.5.25",
     "typescript": "^4.1.5"
   },
   "repository": {
