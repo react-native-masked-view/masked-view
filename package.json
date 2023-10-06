@@ -41,7 +41,7 @@
     "prettier": "^2.2.1",
     "react-native": "0.72.5",
     "react-native-test-app": "^2.5.25",
-    "typescript": "^4.1.5"
+    "typescript": "4.8.4"
   },
   "repository": {
     "type": "git",
