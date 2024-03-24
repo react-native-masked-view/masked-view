@@ -8,6 +8,8 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+
 import com.facebook.react.views.view.ReactViewGroup;
 
 public class RNCMaskedView extends ReactViewGroup {
@@ -15,8 +17,8 @@ public class RNCMaskedView extends ReactViewGroup {
 
   private Bitmap mBitmapMask = null;
   private boolean mBitmapMaskInvalidated = false;
-  private Paint mPaint;
-  private PorterDuffXfermode mPorterDuffXferMode;
+  private final Paint mPaint;
+  private final PorterDuffXfermode mPorterDuffXferMode;
 
   public RNCMaskedView(Context context) {
     super(context);
@@ -48,7 +50,7 @@ public class RNCMaskedView extends ReactViewGroup {
   }
 
   @Override
-  public void onDescendantInvalidated(View child, View target) {
+  public void onDescendantInvalidated(@NonNull View child, @NonNull View target) {
     super.onDescendantInvalidated(child, target);
 
     if (!mBitmapMaskInvalidated) {

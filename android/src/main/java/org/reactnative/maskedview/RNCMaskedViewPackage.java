@@ -1,25 +1,41 @@
 package org.reactnative.maskedview;
 
-import com.facebook.react.ReactPackage;
-import com.facebook.react.bridge.JavaScriptModule;
+import androidx.annotation.Nullable;
+
+import com.facebook.react.TurboReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.module.model.ReactModuleInfo;
+import com.facebook.react.module.model.ReactModuleInfoProvider;
 import com.facebook.react.uimanager.ViewManager;
 
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class RNCMaskedViewPackage implements ReactPackage {
+public class RNCMaskedViewPackage extends TurboReactPackage {
   @Override
-  public List<NativeModule> createNativeModules(ReactApplicationContext reactApplicationContext) {
-    return Collections.emptyList();
+  @Nullable
+  public NativeModule getModule(String name, ReactApplicationContext reactContext) {
+    return null;
+  }
+
+  @Override
+  public ReactModuleInfoProvider getReactModuleInfoProvider() {
+    final Map<String, ReactModuleInfo> reactModuleInfoMap = new HashMap<>();
+    return new ReactModuleInfoProvider() {
+      @Override
+      public Map<String, ReactModuleInfo> getReactModuleInfos() {
+        return reactModuleInfoMap;
+      }
+    };
   }
 
   @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactApplicationContext) {
-      return Arrays.<ViewManager>asList(
-            new RNCMaskedViewManager()
-      );
+    return Arrays.<ViewManager>asList(
+      new RNCMaskedViewManager()
+    );
   }
 }

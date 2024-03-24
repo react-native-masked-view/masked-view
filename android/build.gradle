@@ -15,7 +15,14 @@ buildscript {
   }
 }
 
+def isNewArchitectureEnabled() {
+    return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
+}
+
 apply plugin: 'com.android.library'
+if (isNewArchitectureEnabled()) {
+    apply plugin: "com.facebook.react"
+}
 
 def agpVersion = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')[0].toInteger()
 def shouldUseNameSpace = agpVersion >= 7
@@ -39,20 +46,25 @@ manifestContent.replaceAll("  ", " ")
 manifestOutFile.write(manifestContent)
 
 android {
-  compileSdkVersion safeExtGet('compileSdkVersion', 28)
+  compileSdkVersion safeExtGet('compileSdkVersion', 33)
   
   if(shouldUseNameSpace){
     namespace = "org.reactnative.maskedview"
   }
 
   defaultConfig {
-    minSdkVersion safeExtGet('minSdkVersion', 16)
-    targetSdkVersion safeExtGet('targetSdkVersion', 28)
+    minSdkVersion safeExtGet('minSdkVersion', 21)
+    targetSdkVersion safeExtGet('targetSdkVersion', 33)
+    buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
   }
 
   sourceSets {
     main {
-      java.srcDirs = ['src/main/java']
+      if (isNewArchitectureEnabled()) {
+        java.srcDirs += ['src/newarch/java', "${project.buildDir}/generated/source/codegen/java"]
+      } else {
+        java.srcDirs += ['src/oldarch/java']
+      }
     }
   }
 
