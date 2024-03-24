@@ -21,8 +21,8 @@
     "test:prettier": "prettier --check './**/*.js'"
   },
   "peerDependencies": {
-    "react": ">=16",
-    "react-native": ">=0.57"
+    "react": ">=18",
+    "react-native": ">=0.71"
   },
   "files": [
     "index.js",
@@ -52,5 +52,13 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "codegenConfig": {
+    "name": "RNMaskedViewSpec",
+    "type": "components",
+    "jsSrcsDir": "js",
+    "android": {
+      "javaPackageName": "org.reactnative.maskedview"
+    }
   }
 }
