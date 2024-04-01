@@ -9,9 +9,10 @@
  */
 
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, requireNativeComponent } from 'react-native';
 
-import RNCMaskedViewNativeComponent from './RNCMaskedViewNativeComponent';
+const RNCMaskedView = requireNativeComponent<any>('RNCMaskedView');
+
 import type { MaskedViewProps } from './MaskedViewTypes';
 
 /**
@@ -69,12 +70,12 @@ export default class MaskedView extends React.Component<MaskedViewProps> {
     }
 
     return (
-      <RNCMaskedViewNativeComponent {...otherViewProps}>
+      <RNCMaskedView {...otherViewProps}>
         <View pointerEvents="none" style={StyleSheet.absoluteFill}>
           {maskElement}
         </View>
         {children}
-      </RNCMaskedViewNativeComponent>
+      </RNCMaskedView>
     );
   }
 }
