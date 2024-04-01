@@ -5,6 +5,18 @@
     {
       "appKey": "MaskedViewExample",
       "displayName": "MaskedViewExample"
+    },
+    {
+      "appKey": "MaskedViewImageExample",
+      "displayName": "Image example"
+    },
+    {
+      "appKey": "MaskedViewTextExample",
+      "displayName": "Text example"
+    },
+    {
+      "appKey": "MaskedViewPointerEventsExample",
+      "displayName": "PointerEvents example"
     }
   ],
   "resources": {
