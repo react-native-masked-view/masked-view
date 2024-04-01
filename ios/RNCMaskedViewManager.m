@@ -7,21 +7,15 @@
 
 #import "RNCMaskedViewManager.h"
 
-#if RCT_NEW_ARCH_ENABLED
-#else
 #import "RNCMaskedView.h"
-#endif
 
 @implementation RNCMaskedViewManager
 
 RCT_EXPORT_MODULE()
 
-#if RCT_NEW_ARCH_ENABLED
-#else
 - (UIView *)view
 {
   return [RNCMaskedView new];
 }
-#endif
 
 @end

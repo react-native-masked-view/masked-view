@@ -4,10 +4,9 @@ import MaskedView from '@react-native-masked-view/masked-view';
 
 import Colors from '../colors';
 
-const ExampleContainer = ({ children, style, ...rest }) => (
+const ExampleContainer = ({ children }) => (
   <MaskedView
-    {...rest}
-    style={[styles.maskedView, style]}
+    style={styles.maskedView}
     maskElement={
       <View style={styles.maskElementView}>
         <Text style={styles.maskElementText}>Basic Mask</Text>
