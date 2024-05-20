@@ -11,7 +11,7 @@ Provides a React component that renders a masked view.
 
 - [x] iOS
 - [x] Android
-- [ ] Web
+- [x] Web
 
 ## Getting Started
 
@@ -93,6 +93,13 @@ export default App
 The following image demonstrates that you can put almost anything behind the mask. The three examples shown are masked `<View>`, `<Text>`, and `<Image>`.
 
 <div align="center"><img src="img/example.png" width="200"></img></div>
+
+### Web Usage
+
+you need to install moden-screenshot package for web usage:
+```sh
+yarn add modern-screenshot
+```
 
 ### Props
 
