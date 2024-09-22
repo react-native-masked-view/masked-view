@@ -41,6 +41,7 @@ public class RNCMaskedView extends ReactViewGroup {
 
     // draw the mask
     if (mBitmapMask != null) {
+      setLayerType(LAYER_TYPE_HARDWARE, mPaint);
       mPaint.setXfermode(mPorterDuffXferMode);
       canvas.drawBitmap(mBitmapMask, 0, 0, mPaint);
       mPaint.setXfermode(null);
