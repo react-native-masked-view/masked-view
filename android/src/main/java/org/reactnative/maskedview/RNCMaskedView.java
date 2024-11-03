@@ -17,12 +17,10 @@ public class RNCMaskedView extends ReactViewGroup {
   private boolean mBitmapMaskInvalidated = false;
   private Paint mPaint;
   private PorterDuffXfermode mPorterDuffXferMode;
+  private int mRenderingMode = View.LAYER_TYPE_HARDWARE;
 
   public RNCMaskedView(Context context) {
     super(context);
-
-    // Default to hardware rendering, androidRenderingMode prop will override
-    setRenderingMode("hardware");
 
     mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     mPorterDuffXferMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
@@ -41,6 +39,7 @@ public class RNCMaskedView extends ReactViewGroup {
 
     // draw the mask
     if (mBitmapMask != null) {
+      setLayerType(mRenderingMode, mPaint);
       mPaint.setXfermode(mPorterDuffXferMode);
       canvas.drawBitmap(mBitmapMask, 0, 0, mPaint);
       mPaint.setXfermode(null);
@@ -108,10 +107,6 @@ public class RNCMaskedView extends ReactViewGroup {
   }
 
   public void setRenderingMode(String renderingMode) {
-    if (renderingMode.equals("software")) {
-      setLayerType(LAYER_TYPE_SOFTWARE, null);
-    } else {
-      setLayerType(LAYER_TYPE_HARDWARE, null);
-    }
+    mRenderingMode = renderingMode.equals("software") ? View.LAYER_TYPE_SOFTWARE : View.LAYER_TYPE_HARDWARE;
   }
 }
