@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Mike Nedosekin <crespo8800@gmail.com>",
   "license": "MIT",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "homepage": "https://github.com/react-native-masked-view/masked-view#readme",
   "keywords": [
     "react-native",
@@ -32,16 +32,16 @@
     "types",
     "RNCMaskedView.podspec"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "@react-native-community/eslint-config": "^2.0.0",
-    "@types/react-native": "^0.63.50",
-    "eslint": "^7.20.0",
-    "flow-bin": "^0.218.0",
-    "prettier": "^2.2.1",
-    "react-native": "0.72.5",
-    "react-native-test-app": "^2.5.25",
-    "typescript": "4.8.4"
+    "@react-native/eslint-config": "^0.76.1",
+    "@types/react-native": "^0.72.8",
+    "eslint": "8",
+    "eslint-plugin-ft-flow": "^3.0.11",
+    "flow-bin": "^0.246.0",
+    "prettier": "^3.3.3",
+    "react-native": "0.75.3",
+    "react-native-test-app": "^3.10.5",
+    "typescript": "5.3.2"
   },
   "repository": {
     "type": "git",
@@ -52,5 +52,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha256.c17d3797fb9a9115bf375e31bfd30058cac6bc9c3b8807a3d8cb2094794b51ca"
 }
